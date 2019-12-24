@@ -14,4 +14,9 @@ MILP.
 #### Formulations
 ![](2019-12-23-20-01-36.png)
 Often, a given formulation can be strengthened with additional inequalities satisfied by all feasible integer solutions.
+Ways to enhance a formulation:
+- Add valid inequalities
+- Make extended formulations
+The first approach is about adding constraints which are satisfied by every feasible solution to get a stronger formulation. The second approach is about adding more variables and do "lifting". The variable of concern can be obtained by projection of the lifted new variable. The geometry  of this approach is expressed clearly by the following graph:
+![](2019-12-24-09-28-04.png) 
 

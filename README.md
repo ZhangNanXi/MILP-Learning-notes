@@ -1,8 +1,8 @@
 # MILP-Learning-notes
 This is a learning notes of reading materials on MILP books and slides. The reference files will be provided later.
 IP problems are usually linked with NP-hard problems, thus the computational complextity of this kind of problem is usually high. On the 
-other hand, this is also a powerful tool to build modelings. The following thm provide a result on what kind of problems can be modeled by 
-MILP.
+other hand, this is also a powerful tool to build modelings. The following thm provide a result on what kind of problems can be modeled by MILP.
+
 **Representability Theorem** A set $F$ is $MILP$ representable iff there exist rational polytopes $P_1,...P_k$ and vectors $r^1,...r^t\in Z^n$ such that $F=\cup_{i=1}^k(P_i+intcone(r^1,...r^t))$.
  Here intcone stands for integer cone($intcone(X)=\{\lambda_1x_1+...+\lambda_tx_t|t\geq 0,x_1,...,x_n\in X,\lambda_i\in Z_+\}$)
 #### Techniques in MILP
@@ -19,4 +19,6 @@ Ways to enhance a formulation:
 - Make extended formulations
 The first approach is about adding constraints which are satisfied by every feasible solution to get a stronger formulation. The second approach is about adding more variables and do "lifting". The variable of concern can be obtained by projection of the lifted new variable. The geometry  of this approach is expressed clearly by the following graph:
 ![](2019-12-24-09-28-04.png) 
+#### Dimension of polyhedron, face, facets
+The definitions of these terms are given in the slides. Here is the geometry understanding of these concepts. Take the full dimension polyhedron for example. Since the polyhedron is full dimension. There won't be some equalities in the constraints. Since one equality means 1 dimension reduction. A face is obtained by setting some inequalities to equalities. Notice this is some kind of dimension reduction, before we took all the points on one side of a hyperplane as feasible point. When we set one ineq to equaltity, we are saying that now we only concern about the points exactly on that hyperplane. So the ineq we set to equality is a "representation" of the face since it's the one who is defining new border. Facets means that the dimension of the face is just one less than the polyhedron.  An inequality is facet defining means that the inequality which is representation of the face is the only ineq which takes "=". If so, then it's facet-defining.
 
